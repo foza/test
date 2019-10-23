@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Task 7</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
+<style>
+    .task {
+        width: 80%;
+        margin: auto;
+        border: 1px solid;
+        padding: 3%;
+        margin-top:20px;
+    }
+</style>
+<div class="task">
+<h3> Тестовое задание №5</h3>
+
+<p>Cоздать 3 кнопки с названиями 1, 2, 3, расположенные друг над другом.</p>
+<p>Должны менять свой порядок с
+<ul>
+    <li>1,2,3</li>
+    <li>2,3,1</li>
+    <li>3,1,2</li>
+    <li>1,2,3</li>
+</ul>
+</p>
+<p>Код должен быть написан с ипользованием библиотеки jQuery</p>
+</div>
+<div class="task" id="set">
+    <button>1</button>
+    <br>
+    <button>2</button>
+    <br>
+    <button>3</button>
+    <br>
+</div>
+<script>
+    $("button").click(function () {
+        $("button").each(function (i) {
+            switch ($(this).text()) {
+                case '1':
+                    $(this).html('2');
+                    break;
+                case '2':
+                    $(this).html('3');
+                    break;
+                case '3':
+                    $(this).html('1');
+                    break;
+            }
+        });
+    });
+</script>
+</body>
+</html>
